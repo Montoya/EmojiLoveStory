@@ -1,17 +1,18 @@
-MemoryGame.js
+Emoji Game
 =================
+
+Based on MemoryGame.js
+
+Modified to use [Emoji One](http://www.emojione.com/)
 
 MemoryGame.js is a Javascript implementation of Memory Game (http://en.wikipedia.org/wiki/Concentration_(game)).
 
-Demo is available at http://mark-rolich.github.com/MemoryGame.js
+Demo is available at http://thisisdecktonic.com/emoji/
 
 MemoryGame.js requires Event.js package, which can be acquired at the following links:
 
 * Github - https://github.com/mark-rolich/Event.js
 * JS Classes - http://www.jsclasses.org/package/212-JavaScript-Handle-events-in-a-browser-independent-manner.html
-
-MemoryGame.js uses great [Raphaël Icon-Set](http://raphaeljs.com/icons/) by Dmitry Baranovskiy,
-converted to [Webfont](http://icons.marekventur.de/) by Marek Ventur.
 
 Browser Compatibility
 --------------------
@@ -23,17 +24,10 @@ Currently tested in:
 * Firefox 18
 * Safari 5.1.1
 
-Bug tracker
------------
-
-Have a bug? Please create an issue here on GitHub!
-
-https://github.com/mark-rolich/MemoryGame.js/issues
-
 Copyright and License
 ---------------------
 
-Copyright 2012 Mark Rolich
+Copyright 2014 Christian Montoya
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

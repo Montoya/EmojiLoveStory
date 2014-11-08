@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Emoji Love Story</title>
+<meta name="description" content="@decktonic, @an0va and @radionarcotix want to tell you a story.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="http://cdn.jsdelivr.net/emojione/1.3.0/lib/js/emojione.min.js"></script>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/emojione/1.3.0/assets/css/emojione.min.css">
+<link href="http://fonts.googleapis.com/css?family=Cousine" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="emoji_game.css">
+
+<style>
+@media (max-width: 500px) {
+  body { zoom: 0.75; }
+}
+</style>
+</head>
+<body>
+<h1>&nbsp;</h1>
+<p id="game-info">&nbsp;</p>
+
+<ul id="levels" style="display:none">
+    <li class="selected"><a href="javascript:" level="0">1</a></li>
+    <li><a href="javascript:" level="1">2</a></li>
+    <li><a href="javascript:" level="2">3</a></li>
+    <li><a href="javascript:" level="3">4</a></li>
+    <li><a href="javascript:" level="4">5</a></li>
+    <li><a href="javascript:" level="5">6</a></li>
+    <li><a href="javascript:" level="6">7</a></li>
+    <li><a href="javascript:" level="7">8</a></li>
+    <li><a href="javascript:" level="8">9</a></li>
+    <li><a href="javascript:" level="9">10</a></li>
+</ul>
+
+<div id="playfield-wrapper">&nbsp;<!-- <div id="win-text" class="win-text">:revolving_hearts:</div>--></div>
+
+<div class="footer">
+  <div class="footer-inside">
+    <div style="float:left">
+      <a href="http://twitter.com/decktonic"><img src="https://pbs.twimg.com/profile_images/522002325515145216/eg4-ajS0_normal.jpeg" width="24" height="24" alt="@d"></a>
+      <a href="http://twitter.com/an0va"><img src="https://pbs.twimg.com/profile_images/528625734731190273/Sr8t6TjI_normal.jpeg" width="24" height="24" alt="@a"></a>
+      <a href="http://twitter.com/radionarcotix"><img src="https://pbs.twimg.com/profile_images/515534875621720065/CDmjqdhO_normal.jpeg" width="24" height="24" alt="@r"></a>
+    </div>
+    <img src="img/github-icon.png" width="24" height="24" alt="">
+  </div>
+</div>
+
+<script type="text/javascript" src="event.js"></script>
+<script type="text/javascript" src="emoji_game.js"></script>
+<script type="text/javascript">
+"use strict";
+var evt = new Event(),
+    game = new EmojiGame(evt);
+/*
+var win_text = document.getElementById('win-text').textContent; 
+var win_emoji = emojione.shortnameToImage(win_text);
+console.log(''+win_emoji); 
+document.getElementById('win-text').innerHTML = win_emoji; */
+</script>
+
+</body>
+</html>

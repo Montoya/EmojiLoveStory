@@ -9,11 +9,9 @@
 * Firefox 18
 * Safari 5.1.1
 *
-* MemoryGame.js requires Event.js package, which can be acquired at the following links:
-* Github - https://github.com/mark-rolich/Event.js
-* JS Classes - http://www.jsclasses.org/package/212-JavaScript-Handle-events-in-a-browser-independent-manner.html
-*
-* @author Mark Rolich <mark.rolich@gmail.com>
+* Lifted from MemoryGame.js by Mark Rolich, hacked to support :emoji: 
+* 
+* @author Christian Montoya
 */
 Array.prototype.shuffle = function () {
     var temp, j, i;
@@ -41,7 +39,7 @@ Array.prototype.in_array = function (value) {
 var Level = function (evt, rows, cols, matches) {
     "use strict";
 
-    var cardsList           = '!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVW[\\]^_`abcdefghijklmnopqrstuvwxyzÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜ',
+    var cardsList           = [':bread:',':heart:',':poop:',':cat:',':dog:',':cow:',':ship:',':house:',':alien:',':train:',':sunrise:',':rainbow:',':dizzy_face:',':fries:',':musical_keyboard:',':space_invader:',':ghost:',':floppy_disk:',':musical_note:',':fire:',':ribbon:'],
         playfieldWrapper    = document.getElementById('playfield-wrapper'),
         playfield           = document.createElement('table'),
         cards               = [],
@@ -53,7 +51,7 @@ var Level = function (evt, rows, cols, matches) {
         Card                = function (text, pair) {
             this.state      = 0;
             this.freezed    = 0;
-            this.text       = text;
+            this.text       = emojione.shortnameToImage(text);
             this.pair       = pair;
             this.clicksCnt     = 0;
 
@@ -63,8 +61,9 @@ var Level = function (evt, rows, cols, matches) {
                 clicks  = null;
 
             this.draw = function (idx, container) {
-                var card    = document.createElement('div'),
-                    txt     = document.createTextNode(this.text);
+                var card    = document.createElement('div');
+                var txt     = document.createElement('span');
+                    txt.innerHTML = this.text; 
 
                 flipper = card.cloneNode(false);
 
@@ -252,7 +251,6 @@ var Level = function (evt, rows, cols, matches) {
     playfieldWrapper.className = '';
     playfield.className = 'play-field';
 
-    cardsList = cardsList.split('');
     cardsList.shuffle();
 
     this.onwin = function () {};
@@ -262,14 +260,14 @@ var Level = function (evt, rows, cols, matches) {
     mouseHndl = evt.attach('mousedown', playfield, play);
 };
 
-var MemoryGame = function (evt) {
+var EmojiGame = function (evt) {
     "use strict";
     var lvlNum      = 0,
         info        = document.getElementById('game-info'),
         lvlCtrls    = document.getElementById('levels'),
         lvls        = [
-            {'rows': 3, 'cols': 4, 'matches': 2},
-            {'rows': 4, 'cols': 4, 'matches': 2},
+            /*{'rows': 3, 'cols': 4, 'matches': 2},*/
+            {'rows': 4, 'cols': 4, 'matches': 2}/*,
             {'rows': 4, 'cols': 5, 'matches': 2},
             {'rows': 3, 'cols': 4, 'matches': 3},
             {'rows': 3, 'cols': 5, 'matches': 3},
@@ -277,7 +275,7 @@ var MemoryGame = function (evt) {
             {'rows': 4, 'cols': 4, 'matches': 4},
             {'rows': 4, 'cols': 5, 'matches': 4},
             {'rows': 4, 'cols': 6, 'matches': 4},
-            {'rows': 5, 'cols': 6, 'matches': 5}
+            {'rows': 5, 'cols': 6, 'matches': 5}*/
         ],
         lastBtn     = lvlCtrls.childNodes[1],
         btn         = null,
@@ -286,10 +284,11 @@ var MemoryGame = function (evt) {
         start       = function () {
             currentLvl = new Level(evt, lvl.rows, lvl.cols, lvl.matches);
             currentLvl.onwin = function (clicks, prc) {
-                info.innerHTML = 'You\'ve found all matches in <strong>' + clicks + '</strong> clicks with <strong>' + prc + '%</strong> efficiency';
+                info.innerHTML = '<strong>' + clicks + '</strong> clicks :: <strong>' + prc + '%</strong> efficiency';
             };
 
-            info.innerHTML = 'Click the cards to reveal <strong>' + lvl.matches + '</strong> matches';
+            /*info.innerHTML = 'Click the cards to reveal <strong>' + lvl.matches + '</strong> matches';*/
+            info.innerHTML = 'match emoji'; 
         };
 
     start();
