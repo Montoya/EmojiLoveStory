@@ -1,7 +1,9 @@
-Emoji Game
+Emoji Love Story
 =================
 
-Based on MemoryGame.js
+[@decktonic](http://twitter.com/decktonic) presents "Emoji Love Story" featuring [@an0va](http://twitter.com/an0va) and [@radionarcotix](http://twitter.com/radionarcotix)
+
+Based on [MemoryGame.js](https://github.com/mark-rolich/MemoryGame.js)
 
 Modified to use [Emoji One](http://www.emojione.com/)
 

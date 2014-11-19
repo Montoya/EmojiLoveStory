@@ -243,9 +243,9 @@ var Level = function (evt, rows, cols, matches) {
         };
 
     if ((rows * cols) / matches > cardsList.length) {
-        throw ('There are not enough cards to display the playing field');
+        throw ('not enough cards');
     } else if ((rows * cols) % matches !== 0) {
-        throw ('Out of bounds');
+        throw ('out of bounds');
     }
 
     playfieldWrapper.className = '';
@@ -280,18 +280,19 @@ var EmojiGame = function (evt) {
         lastBtn     = lvlCtrls.childNodes[1],
         btn         = null,
         lvl         = lvls[lvlNum],
-        currentLvl  = null,
-        start       = function () {
+        currentLvl  = null; 
+
+    this.start       = function () {
             currentLvl = new Level(evt, lvl.rows, lvl.cols, lvl.matches);
             currentLvl.onwin = function (clicks, prc) {
-                info.innerHTML = '<strong>' + clicks + '</strong> clicks :: <strong>' + prc + '%</strong> efficiency';
+                info.innerHTML = '<strong>' + clicks + '</strong> flips :: <strong>' + prc + '%</strong> efficiency <a href="javascript:restart()">' + emojione.shortnameToImage(':repeat:') + '</a>';
             };
 
             /*info.innerHTML = 'Click the cards to reveal <strong>' + lvl.matches + '</strong> matches';*/
             info.innerHTML = 'match emoji'; 
         };
 
-    start();
+    this.start();
 
     evt.attach('mousedown', lvlCtrls, function (e, src) {
         if (src.tagName === 'A') {

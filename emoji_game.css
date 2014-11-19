@@ -18,6 +18,7 @@ html {
 body {
     background:#222 url(data:image/gif;base64,R0lGODdhSABIAKIAAP///wAAzgAAnAAAewAAYwAAQgAAGAAAACwAAAAASABIAAAD7Xi63P4wykmrvXiakru/BkF8ZMmEIlEUhul2Raq2b12hYhcYG2djMZEPEyjufhjeYZMpGAPI6IPwDAyl0o2gKBDQsFhDYAQuKwbmBTMNzrGROOH37QoK6T8Z3hbr7200V3+DhIWGh4iJhnOKGTMsjRgyjJERdmSVE5cqmRVBK50UIZShEKSlqKmqqy6nSJBLP6BpfZw1KGx2rh0puy+XgkksK3bBPz2TJDLLsG2YJHHLcljNJdHMq9K9rNrGode22d2sBzMKQb6oId7k6eTv8PHy8/T19vf4+fr7/P3C8yvcxCsmDxi8OPKUzCKUAAA7) center center repeat;
     color:#f0f0f0;
+    padding-bottom:64px; 
 }
 
 h1 {
@@ -32,6 +33,14 @@ p {
     padding: 0;
     width: 100%;
     text-align: center;
+}
+
+a,a:link,a:visited,a:focus,a:hover,a:active {
+    color:#f0f0f0;
+    text-decoration:underline;
+}
+a img {
+    border:none; 
 }
 
 div {
@@ -53,8 +62,14 @@ p strong {
 }
 
 #game-info { 
-  height:24px; 
+  height:28px; 
   overflow:hidden; 
+}
+#game-info a { 
+    display:inline-block; 
+}
+#game-info a img.emojione { 
+    margin-top:0.1ex;
 }
 
 #playfield-wrapper {
@@ -117,6 +132,41 @@ p strong {
 
 #levels li.selected a {
     background-color: #fff; 
+}
+
+#emojiplayer { 
+    width:368px; 
+    margin:36px auto;
+    text-align:left; 
+    overflow:hidden; 
+}
+#emojiplayer-controls { 
+    letter-spacing:-8px; 
+    float:left; 
+    margin-right:8px; 
+    padding-top:2px;
+}
+#emojiplayer-controls a { 
+    display:inline-block;
+}
+#emojiplayer-title, #emojiplayer-artist { 
+    display:block;
+    font-size:11px; 
+    line-height:1.4; 
+}
+#emojiplayer-title { 
+}
+
+#info { 
+    position: fixed;
+    width:368px;
+    left:50%;
+    margin-left:-184px;
+    bottom:48px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius:5px 5px 0 0;
+    padding:12px 0;
+    display:none;
 }
 
 .footer {
