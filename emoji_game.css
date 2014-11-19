@@ -134,29 +134,6 @@ p strong {
     background-color: #fff; 
 }
 
-#emojiplayer { 
-    width:368px; 
-    margin:36px auto;
-    text-align:left; 
-    overflow:hidden; 
-}
-#emojiplayer-controls { 
-    letter-spacing:-8px; 
-    float:left; 
-    margin-right:8px; 
-    padding-top:2px;
-}
-#emojiplayer-controls a { 
-    display:inline-block;
-}
-#emojiplayer-title, #emojiplayer-artist { 
-    display:block;
-    font-size:11px; 
-    line-height:1.4; 
-}
-#emojiplayer-title { 
-}
-
 #info { 
     position: fixed;
     width:368px;
