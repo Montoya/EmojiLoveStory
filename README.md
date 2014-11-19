@@ -11,11 +11,6 @@ MemoryGame.js is a Javascript implementation of Memory Game (http://en.wikipedia
 
 Demo is available at http://thisisdecktonic.com/emoji/
 
-MemoryGame.js requires Event.js package, which can be acquired at the following links:
-
-* Github - https://github.com/mark-rolich/Event.js
-* JS Classes - http://www.jsclasses.org/package/212-JavaScript-Handle-events-in-a-browser-independent-manner.html
-
 Browser Compatibility
 --------------------
 
