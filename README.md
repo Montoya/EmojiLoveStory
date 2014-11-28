@@ -14,7 +14,7 @@ Demo is available at http://thisisdecktonic.com/emoji/
 Browser Compatibility
 --------------------
 
-Uses css3 transitions and transfomations so works in the modern browsers.
+Uses css3 transitions and transfomations so it works in modern browsers.
 Currently tested in:
 
 * Chrome 24
